@@ -5,7 +5,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 enum class Navigasi {
@@ -15,15 +17,25 @@ enum class Navigasi {
 
 @Composable
 fun DataApp(
-    navController: NavController = rememberNavController(),
+    navController: NavHostController = rememberNavController(),
     modifier: Modifier
 ) {
     Scaffold { isiRuang ->
         NavHost(
             navController = navController,
-            startDestination = Navigasi, Navigasi.Formulirku.name,
+            startDestination = Navigasi.Formulirku.name,
 
-            modifier = Modifier.padding(isiRuang)
-        ) }
+            modifier = Modifier.padding( isiRuang)
+        ) {
+            composable(route = Navigasi.Formulirku.name){
+                FormIsian(
+                    //pilihanJK = pilihanJK.map { id -> context.resources.getString(id) },
+                    onSubmitBtnClick ={
+                        navController.navigate(Navigasi.Detail.name)
+
+                    }
+
+                )
+            }
 }
 
