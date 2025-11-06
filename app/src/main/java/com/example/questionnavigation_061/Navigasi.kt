@@ -52,4 +52,3 @@ fun DataApp(
         navController.popBackStack(Navigasi.Formulirku.name,
             inclusive = false)
     }
-}
