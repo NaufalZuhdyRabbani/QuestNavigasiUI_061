@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QuestionNavigation_061</string>
+    <string name="submit">Submit</string>
+    <string name="back">Back</string>
+    <string name="nama_lengkap">NAMA LENGKAP</string>
+    <string name="jenis_kelamin">JENTS KELANIN</string>
+    <string name="aLamat">ALAMAT</string>
+    <string name="tampil">Tampilan Datas</string>
+    <string name="home">Form Isian</string>
+
+    </resources>
