@@ -49,6 +49,6 @@ fun DataApp(
     private fun cancelAndBackToFormulirku(
         navController: NavHostController) {
 
-        navController:
+        navController.popBackStack(Navigasi.Formulirku.name)
     }
 }
